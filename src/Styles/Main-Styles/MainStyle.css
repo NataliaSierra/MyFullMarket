@@ -11,17 +11,28 @@
     display: flex;
   }
   
+  .containerLogotype {
+    display: flex;
+    margin-right: 2rem;
+  }
+  
   .imgLogotype {
     width: 9rem;
     padding-left: 6rem;
     margin-top: -1rem;
+  }
+
+  .imgNameLogotype {
+    width: 9rem;
+    padding-left: 0.5rem;
+    margin-top: -2rem;
   }
   
   .primaryBtnHeader {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    padding-left: 35rem;
+    padding-left: 25rem;
     padding-top: 2rem;
   }
   
