@@ -14,7 +14,7 @@ export const LayoutInputProduct = () => {
   const [city, setCity] = useState("");
   const [date, setDate] = useState("");
   const [idOwner, setIdOwner] = useState("");
-  // []
+
   var formData = new FormData();
 
   const Handle = async (event) => {
@@ -62,7 +62,7 @@ export const LayoutInputProduct = () => {
           classInput="inputAddProduct"
           typeInput="name"
           nameInput="name"
-          valueInput={typeInput}
+          valueInput={name}
           onChange={(e) => setName(e.target.value)}
           placeholder="Nombre"/>
         
@@ -71,14 +71,52 @@ export const LayoutInputProduct = () => {
           typeInput="file"
           nameInput="imgProduct"
           onChange={(e) => setImage(e.target.files[0])}
-          placeholder="Photo"/>
+          placeholder="Imagen"/>
+
         <UInputProduct
           classInput="inputAddProduct"
           typeInput="condition"
           nameInput="condition"
-          valueInput={typeInput}
+          valueInput={condition}
           onChange={(e) => setCondition(e.target.value)}
-          placeholder="Condition"/>
+          placeholder="Condicion"/>
+          
+        <UInputProduct
+          classInput="inputAddProduct"
+          typeInput="description"
+          nameInput="description"
+          valueInput={description}
+          onChange={(e) => setDescription(e.target.value)}
+          placeholder="Descripción"/>
+
+        <UInputProduct
+          classInput="inputAddProduct"
+          typeInput="availability"
+          nameInput="availability"
+          valueInput={availability}
+          onChange={(e) => setAvailability(e.target.value)}
+          placeholder="Disponibilidad"/>
+          
+        <UInputProduct
+          classInput="inputAddProduct"
+          typeInput="city"
+          nameInput="city"
+          valueInput={city}
+          onChange={(e) => setCity(e.target.value)}
+          placeholder="Ciudad"/>
+          
+        <UInputProduct
+          classInput="inputAddProduct"
+          typeInput="idOwner"
+          nameInput="idOwner"
+          valueInput={idOwner}
+          onChange={(e) => setIdOwner(e.target.value)}
+          placeholder="IdOwner"/>
+          
+        <button type="submit" className="button">
+          Publicar Producto
+        </button>
+
       </form>
       </div>
     </>
