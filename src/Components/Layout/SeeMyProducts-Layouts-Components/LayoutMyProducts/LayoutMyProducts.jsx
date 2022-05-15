@@ -1,7 +1,7 @@
 import React, {useEffect,useState} from 'react';
 import { UILogos } from '../../../UI/Main-UI-Components/UILogos/UILogos';
 import { UISeeMyProducts } from '../../../UI/SeeMyProducts-UI-Components/UISeeMyProducts/UISeeMyProducts';
-
+import '../../../../Styles/SeeMyProducts-Styles/SeeMyProductsStyles.css'
 export const LayoutMyProducts = () => {
     const URL = 'https://backend-fullmarket-py.herokuapp.com/getallproducts';
   
