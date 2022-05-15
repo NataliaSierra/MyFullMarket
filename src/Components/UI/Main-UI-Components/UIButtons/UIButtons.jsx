@@ -1,4 +1,5 @@
 import React from "react";
+import '../../../../Styles/Main-Styles/MainStyle.css'
 
 export const UIButtons = ({ nameButtons, classButtons, onClick }) => {
   return (
