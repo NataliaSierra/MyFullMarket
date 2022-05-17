@@ -107,6 +107,14 @@ export const LayoutInputProduct = () => {
           
         <UInputProduct
           classInput="inputAddProduct"
+          typeInput="date"
+          nameInput="date"
+          valueInput={date}
+          onChange={(e) => setDate(e.target.value)}
+          placeholder="Date"/>
+
+        <UInputProduct
+          classInput="inputAddProduct"
           typeInput="idOwner"
           nameInput="idOwner"
           valueInput={idOwner}
