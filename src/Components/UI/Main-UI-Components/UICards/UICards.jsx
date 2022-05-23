@@ -24,9 +24,10 @@ function getModalStyle() {
 const useStyles = makeStyles((theme) => ({
   paper: {
     position: "absolute",
-    width: 400,
+    width: 600,
+    height: 700,
     backgroundColor: theme.palette.background.paper,
-    border: "2px solid #000",
+    border: "0.5px solid #000",
     boxShadow: theme.shadows[5],
     padding: theme.spacing(2, 4, 3),
   },
@@ -48,6 +49,7 @@ export const UICards = ({
   const classes = useStyles();
   const [modalStyle] = React.useState(getModalStyle);
   const [open, setOpen] = React.useState(false);
+
   const handleOpen = () => {
     setOpen(true);
   };
@@ -55,7 +57,6 @@ export const UICards = ({
     setOpen(false);
   };
   
-
 // ---- Get information of each product through its respective ID ---- //
   const featuresProduct = async () => {
     await fetch(
@@ -71,19 +72,23 @@ export const UICards = ({
 
 // ---- Adding the information of each product to the modal window ---- //
   const body = (
-    <div style={modalStyle} className={classes.paper}>
-      <h2 id="simple-modal-title">
-        {typeProduct}: {nameProduct}
-      </h2>
-      <p id="simple-modal-description">Descripcion: {descriptionProduct}</p>
-      {/* <img src={imgProduct} alt="" /> */} {/* Show the picture */}
-      <p>Disponible: {availabilityProduct}</p>
-      <p>{dateProduct}</p>
-      <p>{cityProduct}</p>
-      <button type="button" onClick={handleClose}>
-        OK
-      </button>
+    <div className='modalWindowFeatures'>
+      <div style={modalStyle} className={classes.paper}>
+        <h2 className='titleModalWindows' id="simple-modal-title">
+          {typeProduct}: {nameProduct}
+        </h2>
+        
+        <img className='imgModalWindow' src={imgProduct} alt="" />  {/* Show the picture */}
+        <p className='pModalDescription'>Descripcion: {descriptionProduct}</p>
+        <p className='pModalAvailability'>Disponible: {availabilityProduct}</p>
+        <p>{dateProduct}</p>
+        <p>{cityProduct}</p>
+        <button className='btnOkModal' type="button" onClick={handleClose}>
+          OK
+        </button>
+      </div>
     </div>
+    
   );
   return (
     <>
